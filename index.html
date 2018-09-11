@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="styles/css/style.css">
+    <title>Ankieta + CV</title>
+</head>
+
+<body>
+
+    <div id="quizContainer" class="container">
+        <div id="question" class="question"></div>
+        <label class="option"><input type="radio" name="option" value="1" /> <span class="text" id="opt1"></span></label>
+        <label class="option"><input type="radio" name="option" value="2" /> <span class="text" id="opt2"></span></label>
+        <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">NEXT</button>
+    </div>
+    <div id="result" class="container result"></div>
+
+    <div id="cv-container" class="cv-container">
+
+        <!-- ****LEFT CONTAINER**** -->
+        <section class="left-container">
+            <header class="header">
+                <div class="header__img-container">
+                    <div class="header__img">
+                        <img class="header__photo" src="images/face2.png" alt="my-photo">
+                    </div>
+                </div>
+                <h1 class="header__title">JOHN<br>SMITH</h1>
+                <p class="header__par">WEB DEVELOPER</p>
+            </header>
+            <address class="contact">
+                <h2 class="contact__title">CONTACT</h2>
+                <div class="contact__box"><span class="contact__icon far fa-envelope"></span><a class="contact__link"
+                        href="mailto:johnsmith@company.com">johnsmith@company.com</a></div>
+                <div class="contact__box"><span class="contact__icon fas fa-phone"></span><a class="contact__link" href="tel:+ 62 0819090168930">+
+                        62 0819090168930</a></div>
+                <div class="contact__box"><span class="contact__icon fas fa-home"></span></span><a class="contact__link"
+                        href="#">Merkid, Yogyakarta</a></div>
+                <div class="contact__box"><span class="contact__icon fas fa-globe"></span><a class="contact__link" href="#">www.jhonmrongos.com</a></div>
+            </address>
+            <section class="hobbies">
+                <h2 class="hobbies__title">HOBBIES</h2>
+                <div class="hobbies__container">
+                    <div class="hobbies__box">
+                        <span class="hobbies__icon fas fa-plane"></span>
+                        <p class="hobbies__par">Travel</p>
+                    </div>
+                    <div class="hobbies__box">
+                        <span class="hobbies__icon fas fa-book-open"></span>
+                        <p class="hobbies__par">Reading</p>
+                    </div>
+                    <div class="hobbies__box">
+                        <span class="hobbies__icon fas fa-music"></span>
+                        <p class="hobbies__par">Music</p>
+                    </div>
+                    <div class="hobbies__box">
+                        <span class="hobbies__icon fas fa-pencil-alt"></span>
+                        <p class="hobbies__par">Writing</p>
+                    </div>
+                </div>
+            </section>
+            <section class="social">
+                <div class="social__container">
+                    <p class="social__par">Twitter : <a class="social__link" href="#">@Johndoe</a></p>
+                    <p class="social__par">Facebook : <a class="social__link" href="#">John Doe</a></p>
+                </div>
+            </section>
+        </section>
+
+        <!-- ****RIGHT CONTAINER**** -->
+        <section class="right-container">
+            <section class="profile right-containers">
+                <div class="profile__header-box header-box">
+                    <div class="profile__icon icon-box"><span class="icon fas fa-user"></span></div>
+                    <h2 class="profile__title title">PROFILE</h2>
+                </div>
+                <div class="profile__about about">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cupiditate, asperiores autem magnam
+                    libero laborum optio repudiandae enim quaerat dolorum?<br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quae placeat mollitia repellendus
+                    voluptate dignissimos quos temporibus, pariatur tempora similique!
+                </div>
+            </section>
+            <section class="education right-containers">
+                <div class="education__header-box header-box">
+                    <div class="education__icon icon-box"><span class="icon fas fa-graduation-cap"></span></div>
+                    <h2 class="education__title title">EDUCATION</h2>
+                </div>
+                <div class="education__about about">
+                    <div class="education__box">
+                        <p class="education__par education__par--title">UNIVERSITY OF YK</p>
+                        <p class="education__par education__par--school">Bachelor in Technology information</p>
+                        <p class="education__par education__par--year">2011 - 2014</p>
+                        <p class="education__par education__par--about">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Dolor nostrum repellendus recusandae quas est consequatur nisi magnam!</p>
+                    </div>
+                    <div class="education__box">
+                        <p class="education__par education__par--title">UNIVERSITY OF GK</p>
+                        <p class="education__par education__par--school">Master in Technology Information</p>
+                        <p class="education__par education__par--year">2014 - 2016</p>
+                        <p class="education__par education__par--about">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Eum ut aliquam praesentium numquam rem excepturi, incidunt soluta!</p>
+                    </div>
+                </div>
+            </section>
+            <section class="experience right-containers">
+                <div class="experience__header-box header-box">
+                    <div class="experience__icon icon-box"><span class="icon fas fa-desktop"></span></div>
+                    <h2 class="experience__title title">EXPERIENCE</h2>
+                </div>
+                <div class="experience__about about">
+                    <div class="experience__box">
+                        <p class="experience__par experience__par--title">DUGAB YK.CO</p>
+                        <p class="experience__par experience__par--pos">Junior Web Developer</p>
+                        <p class="experience__par experience__par--year">2016</p>
+                        <p class="experience__par experience__par--about">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Error, labore enim. Repellendus vel illum facilis hic temporibus!</p>
+                    </div>
+                </div>
+            </section>
+            <section class="skills right-containers">
+                <div class="skills__header-box header-box">
+                    <div class="skills__icon icon-box"><span class="icon fas fa-cog"></span></div>
+                    <h2 class="skills__title title">SKILLS</h2>
+                </div>
+                <div class="skills__about about">
+                    <div class="skills__container">
+                        <div class="skills__box">
+                            <div id="circle1" class="skills__graphic"></div>
+                            <p class="skills__par">Java</p>
+                        </div>
+                        <div class="skills__box">
+                            <div id="circle2" class="skills__graphic"></div>
+                            <p class="skills__par">PHP</p>
+                        </div>
+                        <div class="skills__box">
+                            <div id="circle3" class="skills__graphic"></div>
+                            <p class="skills__par">C#</p>
+                        </div>
+                        <div class="skills__box">
+                            <div id="circle4" class="skills__graphic"></div>
+                            <p class="skills__par">HTML5</p>
+                        </div>
+                        <div class="skills__box">
+                            <div id="circle5" class="skills__graphic"></div>
+                            <p class="skills__par">CSS</p>
+                        </div>
+                        <div class="skills__box">
+                            <div id="circle6" class="skills__graphic"></div>
+                            <p class="skills__par">Swift</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </div>
+
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/jquery.circliful.js"></script>
+    <script src="scripts/main.js"></script>
+
+
+
+</body>
+
+</html>

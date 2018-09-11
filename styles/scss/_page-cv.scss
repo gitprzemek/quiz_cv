@@ -1,0 +1,480 @@
+.cv-container {
+	display: none;
+	// display: flex;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 20px 0;
+	padding: 0;
+	max-width: 900px;
+	height: auto;
+	flex-wrap: nowrap;
+	justify-content: center;
+	-webkit-box-shadow: 7px 7px 24px -4px rgba(0, 0, 0, 0.71);
+	-moz-box-shadow: 7px 7px 24px -4px rgba(0, 0, 0, 0.71);
+	box-shadow: 7px 7px 24px -4px rgba(0, 0, 0, 0.71);
+	color: $dark;
+	box-sizing: border-box;
+	overflow: hidden;
+	@include mobiles{
+		margin: 0;
+		flex-wrap: wrap;
+	}
+
+	.left-container {
+		flex: 0 1 40%;
+		background-color: $yellow;
+		position: relative;
+		text-align: center;
+		@include mobiles{
+			flex: 0 1 100%;
+		}
+
+		.header {
+			height: auto;
+
+			.header__img-container {
+				height: 300px;
+				margin-top: 30px;
+				padding: 15px 15px 0;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				@include mobiles{
+					padding: 0;
+					margin-top: 0;
+				}
+
+				.header__img {
+					max-height: 220px;
+					max-width: 220px;
+					border-radius: 50%;
+					background-color: $white;
+					position: relative;
+					display: inline-block;
+					border: 2px solid $white;
+					@include tablets{
+						max-height: 200px;
+						max-width: 200px;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						display: block;
+						left: -20px;
+						top: -20px;
+						width: 240px;
+						height: 240px;
+						border: 6px solid $white;
+						border-radius: 50%;
+						margin: 0;
+						padding: 0;
+						@include tablets{
+							left: -16px;
+							top: -16px;
+							width: 220px;
+							height: 220px;
+						}
+					}
+
+					.header__photo {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+
+			.header__title {
+				height: 170px;
+				margin: 0;
+				font-size: 70px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.header__par {
+				height: 55px;
+				font-size: 32px;
+				font-style: italic;
+				margin: 0 0 45px 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $dark;
+				color: $yellow;
+				@include tablets{
+					font-size: 26px;
+				}
+			}
+		}
+
+		.contact {
+			height: auto;
+			font-style: normal;
+
+			.contact__title {
+				font-size: 32px;
+				font-weight: 500;
+			}
+
+			.contact__box {
+				height: 32px;
+				margin-bottom: 17px;
+				position: relative;
+
+
+				.contact__icon,
+				.contact__link {
+					display: inline-block;
+					box-sizing: border-box;
+					height: 100%;
+					position: relative;
+					
+				}
+
+				.contact__icon {
+					width: 22%;
+					background-color: $dark;
+					color: $yellow;
+					font-size: 20px;
+					line-height: 32px;
+					text-align: right;
+					padding: 0 15px;
+				}
+
+				.contact__link {
+					clear: both;
+					font-size: 18px;
+					line-height: 34px;
+					width: 78%;
+					text-align: left;
+					padding-left: 5px;
+					text-decoration: none;
+					color: $dark;
+					font-weight: 500;
+					z-index: 999;
+
+					@include hover-effect;
+					@include tablets{
+						font-size: 14px;
+						line-height: 38px;
+					}
+					@include mobiles{
+						font-size: 16px;
+						line-height: 36px;
+					}
+
+				}
+			}
+		}
+
+		.hobbies {
+			height: auto;
+			box-sizing: border-box;
+			@include mobiles{
+				width: 80%;
+				margin: auto;
+			}
+
+			.hobbies__title {
+				font-size: 32px;
+				font-weight: 500;
+			}
+
+			.hobbies__container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				@include tablets{
+					margin-left: 15px;
+				}
+				
+
+				.hobbies__box {
+					flex: 0 1 50%;
+					height: 46px;
+					width: 50%;
+					display: inline-block;
+					font-size: 22px;
+					line-height: 20px;
+					display: flex;
+					justify-content: flex-start;
+					margin-bottom: 15px;
+					position: relative;
+					font-weight: 500;
+					@include tablets{
+						font-size: 17px;
+					}
+
+
+					.hobbies__icon {
+						display: inline-block;
+						background-color: $dark;
+						color: $yellow;
+						padding: 10px;
+						width: 25px;
+						height: 25px;
+						line-height: 25px;
+						margin-left: 20px;
+						align-self: center;
+						@include tablets{
+							margin-left: 5px;
+							width: 18px;
+							height: 18px;
+							line-height: 18px;
+						}
+					}
+
+					.hobbies__par {
+						display: inline-block;
+						margin: 0;
+						align-self: center;
+						padding-left: 10px;
+						line-height: 25px;
+						height: 25px;
+						padding: 10px;
+						position: relative;
+						z-index: 1;
+
+						@include hover-effect;
+						@include tablets{
+							height: 18px;
+							line-height: 18px;
+						}
+						
+					}
+				}
+			}
+		}
+
+		.social {
+			position: absolute;
+			bottom: 0;
+			margin-bottom: 30px;
+			width: 100%;
+			height: auto;
+			color: $dark;
+			font-size: 15px;
+			@include mobiles{
+				position: relative;
+				margin-bottom: 10px;
+			}
+
+			.social__container {
+				display: flex;
+				justify-content: center;
+				position: relative;
+				@include tablets{
+					font-size: 13px;
+				}
+
+
+
+				.social__par {
+					padding: 3px 3%;
+					z-index: 22;
+					position: relative;
+
+					@include hover-effect;
+
+					&:hover .social__link {
+						color: $yellow;
+					}
+
+					.social__link {
+						text-decoration: none;
+						color: $dark;
+						transition: all 0.5s linear;
+					}
+				}
+			}
+		}
+	}
+
+	// end left container
+	// START RIGHT CONTAINER**********************************************
+	.right-container {
+		flex: 0 1 60%;
+		background-color: $white;
+		@include mobiles{
+			flex: 0 1 100%;
+		}
+
+		.right-containers {
+			margin-top: 10px;
+			height: auto;
+			position: relative;
+
+			.header-box {
+				height: 52px;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				flex-wrap: nowrap;
+
+				.icon-box {
+					display: inline-block;
+					margin: 0;
+					flex: 0 1 25%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 50px;
+
+					.icon {
+						color: $yellow;
+					}
+				}
+
+				.title {
+					display: inline-block;
+					margin: 0;
+					flex: 0 1 75%;
+					background-color: $dark;
+					color: $white;
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					font-size: 32px;
+					font-weight: 500;
+					padding-left: 15px;
+				}
+			}
+
+			.about {
+				height: auto;
+				padding: 25px;
+			}
+		}
+
+		.profile {
+			margin-top: 30px;
+
+			.profile__header-box {
+				.profile__icon {
+					.icon {}
+				}
+
+				.profile__title {}
+			}
+
+			.profile__about {}
+		}
+
+		.education {
+			.education__about {
+				@include line;
+
+				.education__box {
+					margin-bottom: 25px;
+					position: relative;
+					@include dot;
+
+					.education__par {
+						margin: 0 0 5px 0;
+					}
+
+					.education__par--title {
+						font-weight: 700;
+					}
+
+					.education__par--school {
+						margin: 0;
+						font-weight: 700;
+					}
+
+					.education__par--year {
+						font-weight: 700;
+					}
+
+					.education__par--about {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+
+		.experience {
+			.experience__about {
+				@include line;
+
+				.experience__box {
+					margin-bottom: 25px;
+					position: relative;
+					@include dot;
+
+					.experience__par {
+						margin: 0 0 5px 0;
+					}
+
+					.experience__par--title {
+						font-weight: 700;
+					}
+
+					.experience__par--pos {
+						margin: 0;
+						font-weight: 700;
+					}
+
+					.experience__par--year {
+						font-weight: 700;
+					}
+
+					.experience__par--about {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+
+		.skills {
+			.skills__about {
+				.skills__container {
+					display: flex;
+					justify-content: center;
+					flex-wrap: wrap;
+					margin: 0;
+
+					.skills__box {
+						flex: 0 1 33%;
+						display: flex;
+						justify-content: flex-start;
+						align-content: center;
+						margin: 0px 0 25px 0px;
+						@include mobiles{
+							flex: 0 1 50%;
+							margin: 0px 0 5px 0px;
+						}
+						
+
+						.skills__graphic {
+							font-weight: 700;
+							flex: 0 1 60%;
+						}
+
+						.skills__par {
+							padding: 0 0 0 5px;
+							flex: 0 1 40%;
+							align-self: center;
+							font-weight: 700;
+							@include tablets{
+								font-size: 12px;
+							}
+							@include mobiles{
+								font-size: 16px;
+							}
+						}
+					}
+
+
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,59 @@
+@mixin hover-effect {
+    transition: all 0.5s linear;
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 100%;
+        left: 0;
+        background-color: $dark;
+        position: absolute;
+        transition: all 1s ease;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: $yellow;
+    }
+
+    &:hover::before {
+        z-index: -1;
+        width: 100%;
+
+    }
+}
+
+@mixin line {
+    margin: 25px 0 35px 63px;
+    padding: 10px 25px 0 27px;
+    border-left: 4px solid $yellow;
+    @include tablets{
+        margin: 25px 0 35px 12%;
+    }
+}
+
+@mixin dot {
+    &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        left: -37px;
+        top: 1px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $yellow;
+    }
+}
+
+@mixin tablets {
+    @media only screen and (max-width: 800px) {
+        @content;
+    }
+}
+@mixin mobiles {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
