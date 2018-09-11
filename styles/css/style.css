@@ -716,6 +716,14 @@ svg .icon {
   height: 32px;
   margin-bottom: 17px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .cv-container .left-container .contact .contact__box .contact__icon,
@@ -725,6 +733,7 @@ svg .icon {
           box-sizing: border-box;
   height: 100%;
   position: relative;
+  line-height: 32px;
 }
 
 .cv-container .left-container .contact .contact__box .contact__icon {
@@ -732,15 +741,24 @@ svg .icon {
   background-color: #383838;
   color: #ffc935;
   font-size: 20px;
-  line-height: 32px;
   text-align: right;
-  padding: 0 15px;
+  padding-right: 15px;
 }
 
 .cv-container .left-container .contact .contact__box .contact__link {
   clear: both;
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 78%;
   text-align: left;
   padding-left: 5px;
