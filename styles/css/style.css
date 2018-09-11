@@ -827,9 +827,6 @@ svg .icon {
 }
 
 .cv-container .left-container .hobbies .hobbies__container .hobbies__box {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
   height: 46px;
   width: 50%;
   display: inline-block;

@@ -195,7 +195,7 @@
 				
 
 				.hobbies__box {
-					flex: 0 1 50%;
+					// flex: 0 1 50%;
 					height: 46px;
 					width: 50%;
 					display: inline-block;
@@ -355,15 +355,15 @@
 		.profile {
 			margin-top: 30px;
 
-			.profile__header-box {
-				.profile__icon {
-					.icon {}
-				}
+			// .profile__header-box {
+			// 	.profile__icon {
+			// 		.icon {}
+			// 	}
 
-				.profile__title {}
-			}
+			// 	.profile__title {}
+			// }
 
-			.profile__about {}
+			// .profile__about {}
 		}
 
 		.education {
